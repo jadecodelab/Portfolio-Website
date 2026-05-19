@@ -44,6 +44,49 @@ section{
     padding: 64px 24px;
 }
 
+.section-content{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title{
+    font-size: 32px;
+    margin: 0 0 24px;
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.about-text p{
+    font-size: 18px;
+    line-height: 1.7;
+    margin-top: 0;
+}
+
+.about-details{
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.about-details h3{
+    margin-top: 0;
+}
+
+.about-details ul{
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.about-details li{
+    margin-bottom: 10px;
+}
+
 .hero{
     background-color: #e8f0fe;
     min-height: 80vh;
