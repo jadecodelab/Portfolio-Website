@@ -7,19 +7,36 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <header>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+        <header class="site-header">
+            <nav class="nav">
+                <a class="logo" href="#home">Jade Chung</a>
+
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
             </nav>
         </header>
 
         <main>
-            <section id="home">
-                <h1>Jade Chung</h1>
-                <p>Computer Science Student</p>
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <p class="eyebrow">Hi, I'm Jade.</p>
+                    <h1>Computer Science student building thoughtful software. </h1>
+                    <p class="hero-description">
+                        I'm learning full-stack development and building projects that combine clean design,
+                        practical problem solving, and strong technical foundations.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button primary-button" href="#projects">View Projects</a>
+                        <a class="button secondary-button" href="https://github.com/jadecodelab"
+                        target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+            
             </section>
 
             <section id="about">

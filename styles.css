@@ -9,18 +9,32 @@ body{
     background-color: #f7f7f7;
 }
 
-header{
+.site-header{
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
-    padding: 16px;
+    padding: 16px 24px;
 }
 
-nav{
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo{
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links{
     display: flex;
     gap: 16px;
 }
 
-nav a {
+.nav-links a {
     color: #222;
     text-decoration: none;
     font-weight: bold;
@@ -30,8 +44,60 @@ section{
     padding: 64px 24px;
 }
 
-#home{
+.hero{
     background-color: #e8f0fe;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.eyebrow{
+    font-weight: bold;
+    color: #3454d1;
+    margin-bottom: 16px;
+}
+
+.hero h1{
+    font-size: 48px;
+    margin: 0;
+    max-width: 700px;
+}
+
+.hero-description{
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 24px 0;
+}
+
+.hero-actions{
+    display: flex;
+    gap: 16px;
+}
+
+.button{
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-button{
+    background-color: #222;
+    color:#ffffff;
+}
+
+.secondary-button{
+    background-color: #ffffff;
+    color:#222;
+    border: 1px solid #ccc;
 }
 
 footer{
