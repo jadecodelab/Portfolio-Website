@@ -136,6 +136,56 @@ section{
     font-weight: bold;
 }
 
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.skills-card{
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.skills-card h3{
+    margin-top: 0;
+}
+
+.skills-card ul{
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.skills-card li{
+    margin-bottom: 10px;
+}
+
+.contact-section{
+    background-color: #222;
+    color: #ffffff;
+}
+
+.contact-section .section-intro{
+    color: #f0f0f0;
+}
+
+.contact-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.contact-links a{
+    background-color: #ffffff;
+    color:#222;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .hero{
     background-color: #e8f0fe;
     min-height: 80vh;
