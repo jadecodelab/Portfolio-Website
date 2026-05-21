@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     font-family: Arial, sans-serif;
@@ -221,6 +225,48 @@ section{
 .hero-actions{
     display: flex;
     gap: 16px;
+}
+
+.logo,
+.nav-links a,
+.button,
+.project-card a,
+.contact-links a{
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.logo:hover,
+.nav-links a:hover,
+.project-card a:hover{
+    color: #3454d1;
+}
+
+.primary-button:hover{
+    background-color: #3454d1;
+}
+
+.secondary-button:hover{
+    color: #3454d1;
+    border-color: #3454d1;
+}
+
+.project-card,
+.skills-card,
+.about-details{
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover,
+.skills-card:hover,
+.about-details:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+a:focus-visible{
+    outline: 3px solid #3454d1;
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .button{
