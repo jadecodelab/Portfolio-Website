@@ -248,3 +248,55 @@ footer{
     background-color: #ffffff;
     border-top: 1px solid #ddd;
 }
+
+@media (max-width: 768px){
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    section{
+        padding: 48px 20px;
+    }
+
+    .hero{
+        min-height: auto;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .hero-content{
+        padding: 0;
+    }
+
+    .hero h1{
+        font-size: 36px;
+    }
+
+    .hero-description,
+    .section-intro{
+        font-size: 16px;
+    }
+
+    .about-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions,
+    .contact-links{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button,
+    .contact-links a{
+        text-align: center;
+    }
+
+}
