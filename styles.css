@@ -140,6 +140,12 @@ section{
     font-weight: bold;
 }
 
+.project-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
 .skills-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -335,13 +341,15 @@ footer{
     }
 
     .hero-actions,
-    .contact-links{
+    .contact-links,
+    .project-links{
         flex-direction: column;
         align-items: stretch;
     }
 
     .button,
-    .contact-links a{
+    .contact-links a,
+    .project-links a{
         text-align: center;
     }
 
