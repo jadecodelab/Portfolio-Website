@@ -1,208 +1,251 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jade Chung | Portfolio</title>
-        <meta name="description" content="Portfolio website for Jade Chung, a Computer Science student building projects in web development and software engineering." /> 
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <header class="site-header">
-            <nav class="nav">
-                <a class="logo" href="#home">Jade Chung</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jade Chung | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio website for Ngoc Hui, a Computer Science student building projects in web development and software engineering."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="#home">Ngoc Hui</a>
 
-                <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
-                </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
 
-            </nav>
-        </header>
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Hi, I'm Ngoc.</p>
+          <h1>Computer Science student building thoughtful software.</h1>
+          <p class="hero-description">
+            I'm learning full-stack development and building projects that
+            combine clean design, practical problem solving, and strong
+            technical foundations.
+          </p>
 
-        <main>
-            <section id="home" class="hero">
-                <div class="hero-content">
-                    <p class="eyebrow">Hi, I'm Jade.</p>
-                    <h1>Computer Science student building thoughtful software. </h1>
-                    <p class="hero-description">
-                        I'm learning full-stack development and building projects that combine clean design,
-                        practical problem solving, and strong technical foundations.
-                    </p>
+          <div class="hero-actions">
+            <a class="button primary-button" href="#projects">View Projects</a>
+            <a
+              class="button secondary-button"
+              href="https://github.com/jadecodelab"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </section>
 
-                    <div class="hero-actions">
-                        <a class="button primary-button" href="#projects">View Projects</a>
-                        <a class="button secondary-button" href="https://github.com/jadecodelab"
-                        target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-                </div>
-            
-            </section>
+      <section id="about" class="about-section">
+        <div class="section-content">
+          <h2 class="section-title">About</h2>
 
-            <section id="about" class="about-section">
-                <div class="section-content">
-                    <h2 class="section-title">About</h2>
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                My name is Ngoc Hui, and I also go by Jade. I'm a Computer
+                Science student based in the Bay Area. I'm interested in
+                building useful, well-designed software and growing my skills in
+                full-stack development.
+              </p>
 
-                    <div class="about-grid">
-                        <div class="about-text">
-                            <p>
-                                I'm Jade, a Computer Science student based in the Bay Area. I'm interested in
-                                building useful, well-designed software and growing my skills in full-stack development.
-                            </p>
+              <p>
+                Right now, I'm focused on strengthening my foundation in
+                programming, web development, data structures, and problem
+                solving through hands-on projects.
+              </p>
+            </div>
 
-                            <p>
-                                Right now, I'm focused on strengthening my foundation in programming, web development,
-                                data structures, and problem solving through hands-on projects.
-                            </p>
-                        </div>
+            <div class="about-details">
+              <h3>Currently focused on</h3>
+              <ul>
+                <li>HTML, CSS, and JavaScript</li>
+                <li>Full-stack web development</li>
+                <li>Data structures and algorithms</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                        <div class="about-details">
-                            <h3>Currently focused on</h3>
-                            <ul>
-                                <li>HTML, CSS, and JavaScript</li>
-                                <li>Full-stack web development</li>
-                                <li>Data structures and algorithms</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <section id="projects" class="projects-section">
+        <div class="section-content">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-intro">
+            Projects I've built to practice full-stack development, AI-powered
+            tools, and real-world user workflows.
+          </p>
 
-            <section id="projects" class="projects-section">
-                <div class="section-content">
-                    <h2 class="section-title">Projects</h2>
-                    <p class="section-intro">
-                        Projects I've built to practice full-stack development, AI-powered tools, and real-world user workflows.
-                    </p>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>PGAI Voice Bot Tester</h3>
+              <p>
+                An automated voice bot tester that simulates patients calling a
+                medical office, records conversations, and helps uncover bugs
+                and edge cases in conversational AI systems.
+              </p>
 
-                    <div class="projects-grid">
-                        <article class="project-card">
-                            <h3>PGAI Voice Bot Tester</h3>
-                            <p>
-                                 An automated voice bot tester that simulates patients calling a medical office,
-                                 records conversations, and helps uncover bugs and edge cases in conversational AI systems.
-                            </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Twilio</span>
+                <span>Voice AI</span>
+                <span>Testing</span>
+              </div>
 
-                            <div class="project-tags">
-                                <span>Python</span>
-                                <span>Twilio</span>
-                                <span>Voice AI</span>
-                                <span>Testing</span>
-                            </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/jadecodelab/pgai-voice-bot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Code
+                </a>
+              </div>
+            </article>
 
-                            <div class="project-links">
-                                <a href="https://github.com/jadecodelab/pgai-voice-bot" target="_blank" rel="noopener noreferrer">
-                                View Code
-                                </a>
-                            </div>
+            <article class="project-card">
+              <h3>Clinic Appointment App</h3>
+              <p>
+                A patient-facing clinic booking app with service selection,
+                preset appointment slots, and persistent appointment storage.
+              </p>
 
-                        </article>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>SQLite</span>
+                <span>JavaScript</span>
+              </div>
 
-                        <article class="project-card">
-                            <h3>Clinic Appointment App</h3>
-                            <p>
-                                 A patient-facing clinic booking app with service selection, preset appointment slots,
-                                 and persistent appointment storage.
-                            </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/jadecodelab/clinic-appointment-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Code
+                </a>
+                <a
+                  href="https://maple-grove-family-clinic.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </article>
 
-                            <div class="project-tags">
-                                <span>Python</span>
-                                <span>Flask</span>
-                                <span>SQLite</span>
-                                <span>JavaScript</span>
-                            </div>
+            <article class="project-card">
+              <h3>Flashcards Generator</h3>
+              <p>
+                An AI-powered study app that turns notes into flashcards,
+                supports file uploads, review mode, shuffling, and locally saved
+                decks.
+              </p>
 
-                            <div class="project-links">
-                                <a href="https://github.com/jadecodelab/clinic-appointment-app" target="_blank" rel="noopener noreferrer">
-                                    View Code
-                                </a>
-                                <a href="https://maple-grove-family-clinic.onrender.com/" target="_blank" rel="noopener noreferrer">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </article>
+              <div class="project-tags">
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>OpenAI API</span>
+              </div>
 
-                        <article class="project-card">
-                            <h3>Flashcards Generator</h3>
-                            <p>
-                                 An AI-powered study app that turns notes into flashcards, supports file uploads,
-                                 review mode, shuffling, and locally saved decks.
-                            </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/jadecodelab/Flashcards-Generator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Code
+                </a>
+                <a
+                  href="https://flashcards-generator-g358.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-                            <div class="project-tags">
-                                <span>JavaScript</span>
-                                <span>Node.js</span>
-                                <span>Express</span>
-                                <span>OpenAI API</span>
-                            </div>
-                            
-                            <div class="project-links">
-                                <a href="https://github.com/jadecodelab/Flashcards-Generator" target="_blank" rel="noopener noreferrer">
-                                    View Code
-                                </a>
-                                <a href="https://flashcards-generator-g358.onrender.com/" target="_blank" rel="noopener noreferrer">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-               
-            </section>
+      <section id="skills" class="skills-section">
+        <div class="section-content">
+          <h2 class="section-title">Skills</h2>
+          <p class="section-intro">
+            Tools and concepts I'm learning through coursework, practice, and
+            personal projects.
+          </p>
 
-            <section id="skills" class="skills-section">
-                <div class="section-content">
-                    <h2 class="section-title">Skills</h2>
-                    <p class="section-intro">
-                        Tools and concepts I'm learning through coursework, practice, and personal projects.
-                    </p>
+          <div class="skills-grid">
+            <div class="skills-card">
+              <h3>Languages</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>C++</li>
+              </ul>
+            </div>
 
-                    <div class="skills-grid">
-                        <div class="skills-card">
-                            <h3>Languages</h3>
-                            <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>Python</li>
-                                <li>C++</li>
-                            </ul>
-                        </div>
+            <div class="skills-card">
+              <h3>Tools</h3>
+              <ul>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>VS Code</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                        <div class="skills-card">
-                            <h3>Tools</h3>
-                            <ul>
-                                <li>Git</li>
-                                <li>GitHub</li>
-                                <li>VS Code</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <section id="contact" class="contact-section">
+        <div class="section-content contact-content">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-intro">
+            I'm always open to connecting, learning from others, and hearing
+            about software development opportunities.
+          </p>
 
-            <section id="contact" class="contact-section">
-                <div class="section-content contact-content">
-                    <h2 class="section-title">Contact</h2>
-                    <p class="section-intro">
-                        I'm always open to connecting, learning from others, and hearing about software development opportunities.
-                    </p>
+          <div class="contact-links">
+            <a href="mailto:nhui2@horizon.csueastbay.edu">Email</a>
+            <a
+              href="https://github.com/jadecodelab"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/ngoc-hui"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
 
-                    <div class="contact-links">
-                        <a href="mailto:jchung5@horizon.csueastbay.edu">Email</a>
-                        <a href="https://github.com/jadecodelab" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="https://www.linkedin.com/in/ngoc-jade-chung" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <footer>
+      <p>&copy;2026 Ngoc Hui</p>
+    </footer>
 
-        <footer>
-            <p>&copy;2026 Jade Chung</p>
-        </footer>
-
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+  </body>
 </html>
