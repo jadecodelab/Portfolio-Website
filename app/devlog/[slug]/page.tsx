@@ -1,0 +1,53 @@
+import { notFound } from "next/navigation";
+import { getAllDevlogPosts, getCompiledDevlogPostBySlug } from "@/lib/mdx";
+
+function formatDate(date: string) {
+  return new Intl.DateTimeFormat("en", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(date));
+}
+
+export async function generateStaticParams() {
+  const posts = await getAllDevlogPosts();
+  return posts.map((post) => ({ slug: post.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getCompiledDevlogPostBySlug(slug);
+
+  return {
+    title: post ? `${post.frontmatter.title} | Ngoc Hui` : "Devlog | Ngoc Hui",
+    description: post?.frontmatter.summary,
+  };
+}
+
+export default async function DevlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getCompiledDevlogPostBySlug(slug);
+
+  if (!post) notFound();
+
+  return (
+    <article className="mx-auto max-w-3xl px-5 py-16 sm:px-6 lg:px-8">
+      <p className="text-sm font-semibold text-circuit">{formatDate(post.frontmatter.date)}</p>
+      <h1 className="mt-2 text-4xl font-bold tracking-normal text-ink">{post.frontmatter.title}</h1>
+      {post.frontmatter.summary ? <p className="mt-5 text-lg leading-8 text-slate-600">{post.frontmatter.summary}</p> : null}
+
+      <div className="mt-8 flex flex-wrap gap-2">
+        {post.frontmatter.tags.map((tag) => (
+          <span key={tag} className="rounded-md bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-800">
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <div className="mt-10 space-y-6 border-t border-slate-200 pt-10 text-base leading-8 text-slate-700 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-ink [&_p]:leading-8 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6">
+        {post.content}
+      </div>
+    </article>
+  );
+}

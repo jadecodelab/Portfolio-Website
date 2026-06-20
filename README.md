@@ -1,43 +1,32 @@
 # Portfolio Website
 
-A personal portfolio website built to showcase my projects, skills, and learning journey as a Computer Science student.
+Personal portfolio for Ngoc Hui, a Computer Science student focused on full-stack development, AI agent workflows, and practical product-minded engineering.
 
-## Live Site
+## Stack
 
-[View Portfolio](https://jadecodelab.github.io/Portfolio-Website/)
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- MDX content with gray-matter and next-mdx-remote
+- Vercel deploy target
 
-## About
+## Local Development
 
-This site was built from scratch using HTML, CSS, and JavaScript. It includes sections for an introduction, about me, projects, skills, and contact links.
+Install dependencies first:
 
-## Projects Featured
+```bash
+npm install
+```
 
-- **PGAI Voice Bot Tester** - An automated voice bot tester for simulating patient calls and finding edge cases in conversational AI systems.
-- **Clinic Appointment App** - A patient-facing clinic booking app with appointment slots, conflict handling, and persistent storage.
-- **Flashcards Generator** - An AI-powered study app that generates flashcards from notes and supports review mode.
+Run the dev server:
 
-## Tech Stack
+```bash
+npm run dev
+```
 
-- HTML
-- CSS
-- JavaScript
-- Git
-- GitHub Pages
+## Content
 
-## What I Learned
+Project case studies live in `content/projects/`.
+Devlog posts live in `content/devlog/`.
 
-While building this portfolio, I practiced:
-
-- Structuring a webpage with semantic HTML
-- Styling layouts with CSS Flexbox and Grid
-- Creating responsive designs with media queries
-- Using Git and GitHub for version control
-- Deploying a static website with GitHub Pages
-
-## Future Improvements
-
-- Add more projects as I build them
-- Improve project descriptions and screenshots
-- Add a resume download link
-- Add light/dark mode
-- Continue polishing the design and accessibility
+Each MDX file supports frontmatter for `title`, `date`, `summary`, `tags`, `stack`, `links`, and `featured`.
