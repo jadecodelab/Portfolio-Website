@@ -1,7 +1,7 @@
 ---
 title: "Flashcards Generator"
 date: "2026-06-18"
-summary: "AI-powered study app that turns notes into reviewable flashcard decks."
+summary: "An AI-powered study app that turns notes into flashcards, supports file uploads, review mode, shuffling, and locally saved decks."
 tags:
   - AI app
   - Study tools
@@ -12,23 +12,25 @@ stack:
   - Express
   - OpenAI API
 links:
-  - label: "View Code"
+  - label: "GitHub"
     href: "https://github.com/jadecodelab/Flashcards-Generator"
-  - label: "Live Demo"
+  - label: "Live demo"
     href: "https://flashcards-generator-g358.onrender.com/"
 featured: true
 ---
 
 ## Problem
 
-Students often have notes but need a faster way to turn them into active recall practice.
+Students often have notes, slides, or study material, but turning that content into useful practice questions takes time. I wanted to build a tool that could shorten the path from raw notes to active recall without making the student manually write every card.
 
-## Build
+## Approach
 
-The app generates flashcards from pasted notes or uploaded files, supports review mode, shuffling, and locally saved decks.
+I built Flashcards Generator as an AI-powered study app that turns notes into flashcards and supports the review flow after generation. The app supports file uploads, review mode, shuffling, and locally saved decks so the generated content can become an actual study session instead of a one-time output.
 
-## What I Practiced
+## Tech Decisions
 
-- Connecting a frontend workflow to an AI API
-- Designing a useful review interaction
-- Handling generated content in a study-focused interface
+Node.js and Express provided a straightforward backend for handling requests and connecting to the OpenAI API. JavaScript kept the frontend and backend workflow approachable while I focused on the user flow: input notes, generate cards, review them, and keep decks available locally.
+
+## What I'd Improve
+
+I would improve the quality controls around generated cards, such as letting users edit, delete, and rate cards before saving a deck. I would also add better organization for multiple subjects and make the review mode track progress over time.

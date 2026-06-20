@@ -1,7 +1,7 @@
 ---
 title: "Clinic Appointment App"
 date: "2026-06-19"
-summary: "Patient-facing booking flow with service selection, available appointment slots, and persistent storage."
+summary: "A patient-facing clinic booking app with service selection, preset appointment slots, and persistent appointment storage."
 tags:
   - Full-stack
   - Healthcare
@@ -12,23 +12,25 @@ stack:
   - SQLite
   - JavaScript
 links:
-  - label: "View Code"
+  - label: "GitHub"
     href: "https://github.com/jadecodelab/clinic-appointment-app"
-  - label: "Live Demo"
+  - label: "Live demo"
     href: "https://maple-grove-family-clinic.onrender.com/"
 featured: true
 ---
 
 ## Problem
 
-Clinic booking flows need to make appointment choices clear while preventing duplicate or confusing submissions.
+Clinic appointment flows need to be clear, predictable, and hard to misuse. A patient should be able to choose a service and appointment time without guessing what information is required, while the app needs to store the booking in a way that can be reviewed later.
 
-## Build
+## Approach
 
-The app lets patients choose a service, select from preset appointment slots, and persist bookings with a lightweight backend.
+I built the Clinic Appointment App as a patient-facing booking flow with service selection, preset appointment slots, and persistent appointment storage. The goal was to practice a complete full-stack workflow: collecting user input, validating the booking path, saving appointments, and giving the patient a clear confirmation.
 
-## What I Practiced
+## Tech Decisions
 
-- Building backend routes with Flask
-- Modeling appointment data with SQLite
-- Creating a focused user flow from selection to confirmation
+Flask was a good fit because it kept the backend lightweight while still letting me build real routes and connect them to stored appointment data. SQLite gave the project simple persistence without adding unnecessary infrastructure. JavaScript handled the client-side interaction so the booking experience could feel more immediate and guided.
+
+## What I'd Improve
+
+I would add stronger admin tools for viewing, filtering, and managing appointments. I would also improve validation around time slots and add clearer empty, loading, and error states so the app feels more reliable in real clinic workflows.

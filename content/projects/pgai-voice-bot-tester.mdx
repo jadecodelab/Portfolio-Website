@@ -1,7 +1,7 @@
 ---
 title: "PGAI Voice Bot Tester"
 date: "2026-06-20"
-summary: "Automated testing workflow for patient-style calls into medical office voice bots."
+summary: "An automated voice bot tester that simulates patients calling a medical office, records conversations, and helps uncover bugs and edge cases in conversational AI systems."
 tags:
   - AI agents
   - Testing
@@ -10,23 +10,25 @@ stack:
   - Python
   - Twilio
   - Voice AI
-  - Automation
+  - Testing
 links:
-  - label: "View Code"
+  - label: "GitHub"
     href: "https://github.com/jadecodelab/pgai-voice-bot"
 featured: true
 ---
 
 ## Problem
 
-Conversational AI systems can sound polished during a demo but fail when real callers interrupt, ask unclear questions, or move through a workflow out of order.
+Medical office voice bots need to handle callers who do not follow a perfect script. A patient might interrupt, ask about availability in a vague way, or provide information out of order. Manual testing can catch the obvious paths, but it is slow and easy to repeat the same happy-path calls.
 
-## Build
+## Approach
 
-This project simulates patient calls, records the conversation flow, and helps surface bugs and edge cases that would be hard to catch with manual testing alone.
+I built PGAI Voice Bot Tester as an automated way to simulate patient calls into a medical office voice bot. The tester can run repeatable call scenarios, record the conversation, and make it easier to compare how the bot responds across normal flows and edge cases.
 
-## What I Practiced
+## Tech Decisions
 
-- Designing repeatable test scenarios
-- Thinking through real-world voice bot failure modes
-- Connecting backend automation with external communication APIs
+Python made sense for the automation layer because it is quick to script, easy to extend, and works well for testing workflows. Twilio handles the phone-call side of the project, while the testing logic focuses on scenario design, call flow, and the conversation artifacts needed to debug bot behavior.
+
+## What I'd Improve
+
+I would add a clearer reporting layer that summarizes each test run, highlights failed or suspicious moments, and groups issues by scenario. I would also expand the scenario library so the tester covers more realistic patient behavior, including interruptions, repeated questions, and incomplete information.
