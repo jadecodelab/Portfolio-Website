@@ -7,12 +7,14 @@ export default function AboutPage() {
     <section className="mx-auto max-w-5xl px-5 py-20 sm:px-6 lg:px-8">
       <div className="grid gap-10 lg:grid-cols-[1.35fr_0.8fr]">
         <div>
-          <p className="text-sm font-semibold text-circuit">About</p>
-          <h1 className="mt-2 text-4xl font-bold tracking-normal text-ink">
+          <p className="text-xs font-semibold uppercase tracking-[0.04em] text-jade-soft">
+            About
+          </p>
+          <h1 className="mt-2 font-display text-4xl font-medium text-ink">
             Curious builder exploring full-stack development and AI.
           </h1>
 
-          <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600">
+          <div className="mt-6 space-y-5 text-lg leading-8 text-charcoal">
             <p>
               My name is Ngoc Hui, and you can also call me Jade. I'm a Computer
               Science student at California State University, East Bay, who
@@ -56,15 +58,15 @@ export default function AboutPage() {
           href="/Ngoc%20Hui_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 inline-flex w-full justify-center rounded-md bg-ink px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-signal"
+          className="mt-5 inline-flex w-full justify-center rounded-md bg-jade-deep px-4 py-2.5 text-center text-sm font-semibold text-cream transition hover:bg-ink"
         >
           Download resume
         </a>
-        <aside className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
-          <h2 className="text-sm font-semibold text-ink">
+        <aside className="rounded-lg border border-ink/10 p-5">
+          <h2 className="font-display text-sm font-medium text-ink">
             Currently focused on
           </h2>
-          <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+          <ul className="mt-3 space-y-2 text-sm leading-6 text-charcoal">
             <li>Full-stack web development</li>
             <li>AI agents and workflow automation</li>
             <li>TypeScript, React, Next.js, and Python</li>
