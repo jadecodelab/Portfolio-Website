@@ -35,15 +35,15 @@ export const metadata = {
 
 export default function DesignPage() {
   return (
-    <section className="mx-auto max-w-6xl px-5 py-16 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-6xl px-5 py-20 sm:px-6 lg:px-8">
       <div className="max-w-3xl">
-        <p className="text-sm font-semibold text-circuit">
+        <p className="text-xs font-semibold uppercase tracking-[0.04em] text-jade-soft">
           Secondary portfolio
         </p>
-        <h1 className="mt-2 text-4xl font-bold tracking-normal text-ink">
+        <h1 className="mt-2 font-display text-4xl font-medium text-ink">
           UX/UI design
         </h1>
-        <p className="mt-5 text-lg leading-8 text-slate-600">
+        <p className="mt-5 text-lg leading-8 text-charcoal">
           Selected UX/UI work from my design background. These are short
           previews only; Behance remains the source of truth for the full case
           studies.
@@ -54,7 +54,7 @@ export default function DesignPage() {
         {designProjects.map((project) => (
           <article
             key={project.title}
-            className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md"
+            className="overflow-hidden rounded-lg border border-ink/10 transition hover:border-jade-soft"
           >
             <img
               src={project.thumbnail}
@@ -62,7 +62,7 @@ export default function DesignPage() {
               className="aspect-[16/10] w-full object-cover"
             />
             <div className="p-5">
-              <h2 className="text-lg font-semibold text-ink">
+              <h2 className="font-display text-lg font-medium text-ink">
                 {project.title}
               </h2>
               <p className="mt-2 text-sm leading-6 text-slate-600">
@@ -72,7 +72,7 @@ export default function DesignPage() {
                 href={project.href}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 inline-flex text-sm font-semibold text-circuit transition hover:text-signal"
+                className="mt-4 inline-flex text-sm font-semibold text-jade-deep transition hover:text-ink"
               >
                 View case study
               </a>

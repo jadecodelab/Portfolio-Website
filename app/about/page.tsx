@@ -4,7 +4,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="mx-auto max-w-5xl px-5 py-16 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-5xl px-5 py-20 sm:px-6 lg:px-8">
       <div className="grid gap-10 lg:grid-cols-[1.35fr_0.8fr]">
         <div>
           <p className="text-sm font-semibold text-circuit">About</p>
