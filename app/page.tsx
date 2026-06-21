@@ -10,22 +10,19 @@ export default async function HomePage() {
   return (
     <div>
       <section className="border-b border-ink/10 bg-cream">
-        <div className="mx-auto grid min-h-[78vh] max-w-6xl items-center gap-12 px-5 py-24 sm:px-6 lg:grid-cols-[1fr_0.82fr] lg:px-8 lg:py-28">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.04em] text-jade-soft">
-              Computer Science student
-            </p>
-            <h1 className="mt-5 max-w-[480px] font-display text-4xl font-medium leading-tight text-ink sm:text-5xl lg:text-6xl">
+        <div className="mx-auto flex min-h-[78vh] max-w-6xl flex-col items-center justify-center gap-12 px-5 py-24 text-center sm:px-6 lg:px-8 lg:py-28">
+          <div className="mx-auto flex max-w-5xl flex-col items-center">
+            <h1 className="max-w-[960px] font-display text-4xl font-medium leading-tight text-ink sm:text-5xl lg:text-6xl">
               Computer Science student building{" "}
               <span className="text-jade-deep">full-stack apps</span> — with a
               design background that shapes how I build.
             </h1>
-            <p className="mt-6 max-w-[420px] text-lg leading-8 text-charcoal">
-              I am Ngoc Hui, also known as Jade. I build web apps, automation
-              tools, and AI-powered projects with a design background that helps
-              me care about the user-facing details.
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-charcoal">
+              I am Ngoc Hui, also known as Jade. I build web apps and AI-powered
+              projects with a design background that helps me care about the
+              user-facing details.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
                 href="/projects"
                 className="rounded-md bg-jade-deep px-4 py-2.5 text-sm font-semibold text-cream transition hover:bg-ink"
@@ -41,7 +38,7 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div className="grid gap-3 text-sm leading-6 text-charcoal">
+          <div className="grid w-full gap-3 text-left text-sm leading-6 text-charcoal md:grid-cols-3">
             <div className="rounded-md border border-ink/10 p-4">
               <p className="font-display font-medium text-ink">Current focus</p>
               <p className="mt-1">
