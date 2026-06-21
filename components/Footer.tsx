@@ -1,7 +1,11 @@
 const links = [
   { href: "mailto:nhui2@horizon.csueastbay.edu", label: "Email" },
   { href: "https://github.com/jadecodelab", label: "GitHub" },
-  { href: "https://www.linkedin.com/in/ngoc-hui", label: "LinkedIn" },
+  {
+    href: "https://www.linkedin.com/in/ngoc-hui",
+    label: "LinkedIn",
+  },
+  { href: "chjade.427@gmail.com", label: "Email" },
 ];
 
 export function Footer() {

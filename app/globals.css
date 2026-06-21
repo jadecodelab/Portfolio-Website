@@ -16,8 +16,8 @@ html {
 
 body {
   min-height: 100vh;
-  background: #f8fafc;
-  color: #111827;
+  background: #f7f5f0;
+  color: #3a3a38;
 }
 
 a {
@@ -25,6 +25,6 @@ a {
 }
 
 ::selection {
-  background: #bfdbfe;
-  color: #111827;
+  background: #dbe8e2;
+  color: #0f1b17;
 }
