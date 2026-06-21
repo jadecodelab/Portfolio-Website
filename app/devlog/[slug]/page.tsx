@@ -40,15 +40,15 @@ export default async function DevlogPostPage({
   if (!post) notFound();
 
   return (
-    <article className="mx-auto max-w-3xl px-5 py-16 sm:px-6 lg:px-8">
-      <p className="text-sm font-semibold text-circuit">
+    <article className="mx-auto max-w-3xl px-5 py-20 sm:px-6 lg:px-8">
+      <p className="text-xs font-semibold uppercase tracking-[0.04em] text-jade-soft">
         {formatDate(post.frontmatter.date)}
       </p>
-      <h1 className="mt-2 text-4xl font-bold tracking-normal text-ink">
+      <h1 className="mt-2 font-display text-4xl font-medium text-ink">
         {post.frontmatter.title}
       </h1>
       {post.frontmatter.summary ? (
-        <p className="mt-5 text-lg leading-8 text-slate-600">
+        <p className="mt-5 text-lg leading-8 text-charcoal">
           {post.frontmatter.summary}
         </p>
       ) : null}
@@ -57,7 +57,7 @@ export default async function DevlogPostPage({
         {post.frontmatter.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-md bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-800"
+            className="rounded-md border border-jade-soft/40 px-2.5 py-1 text-xs font-medium text-jade-deep"
           >
             {tag}
           </span>
@@ -72,7 +72,7 @@ export default async function DevlogPostPage({
               href={link.href}
               target="_blank"
               rel="noreferrer"
-              className="text-circuit transition hover:text-signal"
+              className="text-jade-deep transition hover:text-ink"
             >
               {link.label}
             </a>
@@ -80,7 +80,7 @@ export default async function DevlogPostPage({
         </div>
       ) : null}
 
-      <div className="mt-10 space-y-6 border-t border-slate-200 pt-10 text-base leading-8 text-slate-700 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-ink [&_p]:leading-8 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6">
+      <div className="mt-10 space-y-6 border-t border-ink/10 pt-10 text-base leading-7 text-charcoal [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-medium [&_h2]:text-ink [&_p]:leading-7 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6">
         {post.content}
       </div>
     </article>
