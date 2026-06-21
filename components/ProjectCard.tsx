@@ -10,22 +10,36 @@ type ProjectCardProps = {
   links?: ContentLink[];
 };
 
-export function ProjectCard({ slug, title, summary, tags = [], stack = [], links = [] }: ProjectCardProps) {
+export function ProjectCard({
+  slug,
+  title,
+  summary,
+  tags = [],
+  stack = [],
+  links = [],
+}: ProjectCardProps) {
   const chips = stack.length > 0 ? stack : tags;
 
   return (
-    <article className="flex h-full flex-col rounded-lg border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md">
+    <article className="flex h-full flex-col rounded-lg border border-ink/10 bg-cream p-5 transition hover:border-jade-soft">
       <div className="flex-1">
         <Link href={`/projects/${slug}`} className="group inline-block">
-          <h3 className="text-lg font-semibold text-ink transition group-hover:text-signal">{title}</h3>
+          <h3 className="font-display text-lg font-medium text-ink transition group-hover:text-jade-deep">
+            {title}
+          </h3>
         </Link>
-        {summary ? <p className="mt-3 text-sm leading-6 text-slate-600">{summary}</p> : null}
+        {summary ? (
+          <p className="mt-3 text-sm leading-6 text-charcoal">{summary}</p>
+        ) : null}
       </div>
 
       {chips.length > 0 ? (
         <div className="mt-5 flex flex-wrap gap-2">
           {chips.map((chip) => (
-            <span key={chip} className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">
+            <span
+              key={chip}
+              className="rounded-md border border-jade-soft/40 px-2.5 py-1 text-xs font-medium text-jade-deep"
+            >
               {chip}
             </span>
           ))}
@@ -40,7 +54,7 @@ export function ProjectCard({ slug, title, summary, tags = [], stack = [], links
               href={link.href}
               target="_blank"
               rel="noreferrer"
-              className="text-circuit transition hover:text-signal"
+              className="text-jade-deep transition hover:text-ink"
             >
               {link.label}
             </a>
