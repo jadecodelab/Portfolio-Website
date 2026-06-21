@@ -9,17 +9,18 @@ export default async function HomePage() {
 
   return (
     <div>
-      <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto grid min-h-[78vh] max-w-6xl items-center gap-10 px-5 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+      <section className="border-b border-ink/10 bg-cream">
+        <div className="mx-auto grid min-h-[78vh] max-w-6xl items-center gap-12 px-5 py-24 sm:px-6 lg:grid-cols-[1fr_0.82fr] lg:px-8 lg:py-28">
           <div>
-            <p className="text-sm font-semibold text-circuit">
+            <p className="text-xs font-semibold uppercase tracking-[0.04em] text-jade-soft">
               Computer Science student
             </p>
-            <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-normal text-ink sm:text-5xl lg:text-6xl">
-              Computer Science student building full-stack apps and AI agents —
-              with a design background that shapes how I build.
+            <h1 className="mt-5 max-w-[480px] font-display text-4xl font-medium leading-tight text-ink sm:text-5xl lg:text-6xl">
+              Computer Science student building{" "}
+              <span className="text-jade-deep">full-stack apps</span> — with a
+              design background that shapes how I build.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            <p className="mt-6 max-w-[420px] text-lg leading-8 text-charcoal">
               I am Ngoc Hui, also known as Jade. I build web apps, automation
               tools, and AI-powered projects with a design background that helps
               me care about the user-facing details.
@@ -27,13 +28,13 @@ export default async function HomePage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/projects"
-                className="rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-signal"
+                className="rounded-md bg-jade-deep px-4 py-2.5 text-sm font-semibold text-cream transition hover:bg-ink"
               >
                 View Projects
               </Link>
               <Link
                 href="/devlog"
-                className="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-ink transition hover:border-signal hover:text-signal"
+                className="rounded-md border border-jade-deep px-4 py-2.5 text-sm font-semibold text-jade-deep transition hover:bg-jade-deep hover:text-cream"
               >
                 View Devlog
               </Link>
