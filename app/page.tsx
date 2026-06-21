@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ProjectCard } from "@/components/ProjectCard";
+
 import { getAllProjects } from "@/lib/mdx";
 
 export default async function HomePage() {
@@ -41,28 +41,27 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div className="rounded-lg border border-slate-200 bg-slate-50 p-5">
-            <div className="grid gap-3 text-sm text-slate-700">
-              <div className="rounded-md bg-white p-4 shadow-sm">
-                <p className="font-semibold text-ink">Current focus</p>
-                <p className="mt-1">
-                  Full-stack apps, AI agents, and reliable product workflows.
-                </p>
-              </div>
-              <div className="rounded-md bg-white p-4 shadow-sm">
-                <p className="font-semibold text-ink">Core stack</p>
-                <p className="mt-1">
-                  TypeScript, Python, React, Next.js, Flask, SQLite, OpenAI
-                  APIs.
-                </p>
-              </div>
-              <div className="rounded-md bg-white p-4 shadow-sm">
-                <p className="font-semibold text-ink">Differentiator</p>
-                <p className="mt-1">
-                  UX/UI design experience grounded in practical engineering
-                  work.
-                </p>
-              </div>
+          <div className="grid gap-3 text-sm leading-6 text-charcoal">
+            <div className="rounded-md border border-ink/10 p-4">
+              <p className="font-display font-medium text-ink">Current focus</p>
+              <p className="mt-1">
+                Full-stack apps, AI-powered features, and reliable product
+                workflows.
+              </p>
+            </div>
+            <div className="rounded-md border border-ink/10 p-4">
+              <p className="font-display font-medium text-ink">Core stack</p>
+              <p className="mt-1">
+                TypeScript, Python, React, Next.js, Flask, SQLite, OpenAI APIs.
+              </p>
+            </div>
+            <div className="rounded-md border border-ink/10 p-4">
+              <p className="font-display font-medium text-ink">
+                Differentiator
+              </p>
+              <p className="mt-1">
+                UX/UI design experience grounded in practical engineering work.
+              </p>
             </div>
           </div>
         </div>
@@ -71,31 +70,43 @@ export default async function HomePage() {
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-semibold text-circuit">
+            <p className="text-xs font-semibold uppercase tracking-[0.04em] text-jade-soft">
               Featured projects
             </p>
-            <h2 className="mt-2 text-3xl font-bold tracking-normal text-ink">
+            <h2 className="mt-2 font-display text-3xl font-medium text-ink">
               Full-stack and AI builds
             </h2>
           </div>
           <Link
             href="/projects"
-            className="text-sm font-semibold text-signal transition hover:text-circuit"
+            className="text-sm font-semibold text-jade-deep transition hover:text-ink"
           >
             View all projects
           </Link>
         </div>
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           {featuredProjects.map((project) => (
-            <ProjectCard
+            <article
               key={project.slug}
-              slug={project.slug}
-              title={project.frontmatter.title}
-              summary={project.frontmatter.summary}
-              tags={project.frontmatter.tags}
-              stack={project.frontmatter.stack}
-              links={project.frontmatter.links}
-            />
+              className="rounded-lg border border-ink/10 p-5 transition hover:border-jade-soft"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.04em] text-jade-soft">
+                {project.frontmatter.stack[0] ?? "Project"}
+              </p>
+              <Link
+                href={`/projects/${project.slug}`}
+                className="group mt-2 inline-block"
+              >
+                <h3 className="font-display text-lg font-medium text-ink transition group-hover:text-jade-deep">
+                  {project.frontmatter.title}
+                </h3>
+              </Link>
+              {project.frontmatter.summary ? (
+                <p className="mt-3 text-sm leading-6 text-charcoal">
+                  {project.frontmatter.summary}
+                </p>
+              ) : null}
+            </article>
           ))}
         </div>
       </section>
