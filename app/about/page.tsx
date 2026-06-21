@@ -4,8 +4,8 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="mx-auto max-w-5xl px-5 py-20 sm:px-6 lg:px-8">
-      <div className="grid gap-10 lg:grid-cols-[1.35fr_0.8fr]">
+    <section className="mx-auto max-w-6xl px-5 py-20 sm:px-6 lg:px-8">
+      <div className="max-w-3xl">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.04em] text-jade-soft">
             About
@@ -52,27 +52,16 @@ export default function AboutPage() {
               people's lives.
             </p>
           </div>
-        </div>
 
-        <a
-          href="/Ngoc%20Hui_Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-5 inline-flex w-full justify-center rounded-md bg-jade-deep px-4 py-2.5 text-center text-sm font-semibold text-cream transition hover:bg-ink"
-        >
-          Download resume
-        </a>
-        <aside className="rounded-lg border border-ink/10 p-5">
-          <h2 className="font-display text-sm font-medium text-ink">
-            Currently focused on
-          </h2>
-          <ul className="mt-3 space-y-2 text-sm leading-6 text-charcoal">
-            <li>Full-stack web development</li>
-            <li>AI agents and workflow automation</li>
-            <li>TypeScript, React, Next.js, and Python</li>
-            <li>User-centered engineering decisions</li>
-          </ul>
-        </aside>
+          <a
+            href="/Ngoc%20Hui_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex rounded-md bg-jade-deep px-4 py-2.5 text-center text-sm font-semibold text-cream transition hover:bg-ink"
+          >
+            Download resume
+          </a>
+        </div>
       </div>
     </section>
   );
