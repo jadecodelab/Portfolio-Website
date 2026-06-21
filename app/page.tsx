@@ -14,7 +14,7 @@ export default async function HomePage() {
           <div className="mx-auto flex max-w-5xl flex-col items-center">
             <h1 className="max-w-[960px] font-display text-4xl font-medium leading-tight text-ink sm:text-5xl lg:text-6xl">
               Computer Science student building{" "}
-              <span className="text-jade-deep">full-stack apps</span> — with a
+              <span className="text-jade-deep">full-stack apps</span> - with a
               design background that shapes how I build.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-charcoal">
