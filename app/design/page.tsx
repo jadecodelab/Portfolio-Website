@@ -65,7 +65,7 @@ export default function DesignPage() {
               <h2 className="font-display text-lg font-medium text-ink">
                 {project.title}
               </h2>
-              <p className="mt-2 text-sm leading-6 text-slate-600">
+              <p className="mt-2 text-sm leading-6 text-charcoal">
                 {project.description}
               </p>
               <a
