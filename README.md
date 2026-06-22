@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Personal portfolio for Ngoc Hui, a Computer Science student focused on full-stack development, AI agent workflows, and practical product-minded engineering.
+Personal portfolio for Ngoc Hui, a Computer Science student focused on full-stack development, AI-powered tools/features, and practical product-minded engineering.
 
 ## Stack
 

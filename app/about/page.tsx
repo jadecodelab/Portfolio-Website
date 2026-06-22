@@ -40,8 +40,8 @@ export default function AboutPage() {
               clarity, usability, and thoughtful design in mind.
             </p>
             <p>
-              I'm currently focused on full-stack development, AI agents, and
-              modern web technologies. As a strong academic student, I have
+              I'm currently focused on full-stack development, AI-powered tools,
+              and modern web technologies. As a strong academic student, I have
               maintained excellent performance in my computer science coursework
               while continuously expanding my skills through hands-on projects.
               Outside the classroom, I regularly practice problem-solving on
@@ -54,12 +54,12 @@ export default function AboutPage() {
           </div>
 
           <a
-            href="/Ngoc%20Hui_Resume.pdf"
+            href="resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex rounded-md bg-jade-deep px-4 py-2.5 text-center text-sm font-semibold text-cream transition hover:bg-ink"
           >
-            Download resume
+            View resume
           </a>
         </div>
       </div>
