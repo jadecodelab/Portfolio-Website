@@ -14,13 +14,12 @@ export default async function HomePage() {
           <div className="mx-auto flex max-w-5xl flex-col items-center">
             <h1 className="max-w-[960px] font-display text-4xl font-medium leading-tight text-ink sm:text-5xl lg:text-6xl">
               Computer Science student building{" "}
-              <span className="text-jade-deep">full-stack apps</span> - with a
+              <span className="text-jade-deep">full-stack apps</span> — with a
               design background that shapes how I build.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-charcoal">
-              I am Ngoc Hui, also known as Jade. I build web apps and AI-powered
-              projects with a design background that helps me care about the
-              user-facing details.
+              I'm Jade — currently studying CS at Cal State East Bay, sharing
+              what I build and learn as I go.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
@@ -54,7 +53,7 @@ export default async function HomePage() {
             </div>
             <div className="rounded-md border border-ink/10 p-4">
               <p className="font-display font-medium text-ink">
-                Differentiator
+                What's different
               </p>
               <p className="mt-1">
                 UX/UI design experience grounded in practical engineering work.
