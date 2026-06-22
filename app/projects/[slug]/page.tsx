@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllProjects, getCompiledProjectBySlug } from "@/lib/mdx";
+import { getProjectNavigation } from "@/lib/projects";
 
 export async function generateStaticParams() {
   const projects = await getAllProjects();
@@ -32,8 +34,17 @@ export default async function ProjectPage({
 
   if (!project) notFound();
 
+  const { previousProject, nextProject } = getProjectNavigation(slug);
+
   return (
     <article className="mx-auto max-w-3xl px-5 py-20 sm:px-6 lg:px-8">
+      <Link
+        href="/projects"
+        className="mb-5 inline-block text-sm font-semibold text-jade-deep transition hover:text-ink"
+      >
+        ← Back to projects
+      </Link>
+
       <p className="text-xs font-semibold uppercase tracking-[0.04em] text-jade-soft">
         Project case study
       </p>
@@ -74,6 +85,33 @@ export default async function ProjectPage({
       <div className="mt-10 space-y-6 border-t border-ink/10 pt-10 text-base leading-7 text-charcoal [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-medium [&_h2]:text-ink [&_p]:leading-7 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6">
         {project.content}
       </div>
+
+      <nav
+        aria-label="Project navigation"
+        className="mt-12 grid gap-4 border-t border-ink/10 pt-6 sm:grid-cols-2"
+      >
+        <div>
+          {previousProject ? (
+            <Link
+              href={`/projects/${previousProject.slug}`}
+              className="text-sm font-semibold text-jade-deep transition hover:text-ink"
+            >
+              ← {previousProject.title}
+            </Link>
+          ) : null}
+        </div>
+
+        <div className="sm:text-right">
+          {nextProject ? (
+            <Link
+              href={`/projects/${nextProject.slug}`}
+              className="text-sm font-semibold text-jade-deep transition hover:text-ink"
+            >
+              {nextProject.title} →
+            </Link>
+          ) : null}
+        </div>
+      </nav>
     </article>
   );
 }
