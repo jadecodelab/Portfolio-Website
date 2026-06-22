@@ -18,8 +18,8 @@ export default function AboutPage() {
             <p>
               My name is Ngoc Hui, and you can also call me Jade. I'm a Computer
               Science student at California State University, East Bay, who
-              enjoys coding and building practical software that makes everyday
-              life easier and more enjoyable.
+              enjoys building full-stack apps that makes everyday life easier
+              and more enjoyable.
             </p>
             <p>
               My path into tech wasn't a straight line. Before pursuing computer
@@ -33,23 +33,22 @@ export default function AboutPage() {
               motivation led me to continue my education in computer science.
             </p>
             <p>
-              Today, I combine my design background with software development to
-              create applications that are both functional and user-friendly. My
-              experience in UX/UI design helps me think about the user
-              experience, not just the code, allowing me to build software with
+              **Today, I combine my design background with software development
+              to create applications that are both functional and
+              user-friendly.** My experience in UX/UI design helps me think
+              about the user experience, allowing me to build software with
               clarity, usability, and thoughtful design in mind.
             </p>
             <p>
               I'm currently focused on full-stack development, AI-powered tools,
-              and modern web technologies. As a strong academic student, I have
-              maintained excellent performance in my computer science coursework
-              while continuously expanding my skills through hands-on projects.
-              Outside the classroom, I regularly practice problem-solving on
-              LeetCode, work through The Odin Project, and build and deploy web
-              applications, often using AI tools as learning assistants. My goal
-              is to continue growing as a software engineer and contribute to
-              practical, meaningful products that make a positive impact on
-              people's lives.
+              and modern web technologies. I regularly practice problem-solving
+              on LeetCode, work through The Odin Project, and build and deploy
+              web applications, often using AI tools as learning assistants.
+            </p>
+            <p>
+              I'm actively looking for opportunities to contribute to a real
+              team — internships, junior roles, or collaborative projects. If
+              something here resonates, I'd love to connect.
             </p>
           </div>
 
