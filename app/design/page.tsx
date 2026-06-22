@@ -38,7 +38,7 @@ export default function DesignPage() {
     <section className="mx-auto max-w-6xl px-5 py-20 sm:px-6 lg:px-8">
       <div className="max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-[0.04em] text-jade-soft">
-          Secondary portfolio
+          Design portfolio
         </p>
         <h1 className="mt-2 font-display text-4xl font-medium text-ink">
           UX/UI design
