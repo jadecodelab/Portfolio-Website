@@ -1,0 +1,48 @@
+---
+title: "Personalized Birthday Card"
+date: "2026-06-22"
+summary: "A browser-based birthday card builder with live preview, multiple templates, photo upload, movable decorations, and PNG export."
+tags:
+  - React
+  - TypeScript
+  - Vite
+  - AI-assisted development
+stack:
+  - React
+  - TypeScript
+  - Vite
+links:
+  - label: "GitHub"
+    href: "https://github.com/jadecodelab/personalized-birthday-card"
+  - label: "Live demo"
+    href: "https://personalized-birthday-card.vercel.app/"
+featured: true
+---
+
+## Problem
+
+I wanted to create personalized birthday cards that felt like building a tiny celebration, not filling out a plain form.
+
+## Approach
+
+I built the app in phases: scaffold, core builder, personalization, export, and polish. I used Codex as a coding assistant while directing the product, reviewing every output in the browser, and approving every commit. I also kept a detailed project journal documenting each phase so the process stayed intentional instead of turning into random feature-chasing.
+
+## Key features
+
+The builder includes four card templates: soft/sweet, confetti, pop art, and photo-focused. Users can upload a photo, move decorations around, drag the photo, stickers, and tag, choose preset messages or write custom ones, and export the finished card as a PNG.
+
+It also includes a five-step guided wizard, native share API support with a fallback, desktop corner resize handles, and mobile pinch-to-resize.
+
+## Tech decisions
+
+The two-panel layout, with controls on one side and a live preview on the other, defined the whole interaction model early. It made the app feel like a builder instead of a form.
+
+The guided wizard was a reorganization of existing controls, not a brand-new feature set. That became the biggest UX improvement: the app already worked, but restructuring the flow made it feel much easier to use.
+
+## What I'd improve
+
+I would add an envelope opening animation, confetti or balloon animations on reveal, and shareable links for cards that do not rely on uploaded photos.
+
+## What I learned
+
+This project taught me product thinking as much as React syntax. AI assistance still requires human judgment: deciding what the app should become, catching what does not feel right, and keeping the experience improving is work that does not get delegated.
