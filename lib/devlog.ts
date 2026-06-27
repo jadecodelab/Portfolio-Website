@@ -5,6 +5,10 @@ export type OrderedDevlogPost = {
 
 export const orderedDevlogPosts = [
   {
+    slug: "sign-up-form",
+    title: "Intermediate HTML & CSS: Sign-up Form",
+  },
+  {
     slug: "odin-foundations-calculator",
     title: "Finished The Odin Project Foundations",
   },
@@ -20,7 +24,8 @@ export function getDevlogPostNavigation(slug: string) {
   );
 
   return {
-    previousPost: currentIndex > 0 ? orderedDevlogPosts[currentIndex - 1] : null,
+    previousPost:
+      currentIndex > 0 ? orderedDevlogPosts[currentIndex - 1] : null,
     nextPost:
       currentIndex >= 0 && currentIndex < orderedDevlogPosts.length - 1
         ? orderedDevlogPosts[currentIndex + 1]
