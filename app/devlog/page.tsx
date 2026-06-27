@@ -9,7 +9,7 @@ export default async function DevlogPage() {
   const posts = await getAllDevlogPosts();
 
   return (
-    <section className="mx-auto max-w-4xl px-5 py-20 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-6xl px-5 py-20 sm:px-6 lg:px-8">
       <div className="max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-[0.04em] text-jade-soft">
           Build notes
@@ -22,7 +22,7 @@ export default async function DevlogPage() {
           learning while building.
         </p>
       </div>
-      <div className="mt-10 grid gap-5">
+      <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
           <DevlogCard
             key={post.slug}
