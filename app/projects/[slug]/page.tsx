@@ -37,7 +37,7 @@ export default async function ProjectPage({
   const { previousProject, nextProject } = getProjectNavigation(slug);
 
   return (
-    <article className="mx-auto max-w-3xl px-5 py-20 sm:px-6 lg:px-8">
+    <article className="mx-auto max-w-5xl px-5 py-20 sm:px-6 lg:px-8">
       <Link
         href="/projects"
         className="mb-5 inline-block text-sm font-semibold text-jade-deep transition hover:text-ink"
