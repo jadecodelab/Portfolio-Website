@@ -18,8 +18,8 @@ export default async function DevlogPage() {
           Devlog
         </h1>
         <p className="mt-5 text-lg leading-8 text-charcoal">
-          My journey through The Odin Project, building small projects,
-          practicing fundamentals, and documenting what I learn along the way.
+          My journey through software development, building projects, practicing
+          fundamentals, and documenting what I learn along the way.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

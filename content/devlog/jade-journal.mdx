@@ -1,0 +1,71 @@
+---
+title: "Jade Journal"
+date: "2026-07-01"
+summary: "Built a personal AI-powered journal app to document my journey, organize my thoughts, and reflect on my growth over time."
+tags:
+  - Full-stack
+  - Railway
+  - Journal App
+links:
+  - label: "GitHub"
+    href: "https://github.com/jadecodelab/jade-journal"
+  - label: "Live demo"
+    href: "https://jade-journal-production.up.railway.app/"
+---
+
+I wanted a journal app to document my journey and make it easy to reflect over time. This app is built for my personal use and is intended for long-term use.
+
+I know using AI with a journal might not sound right to everyone, but it's exactly what I want and what I find helpful. The AI isn't there to polish or rewrite my writing. Instead, it organizes my journal entries and helps me reflect on them over time more accurately and efficiently.
+
+<div className="grid gap-6 md:grid-cols-2">
+  <figure>
+    <img
+      src="/devlog/jade-journal/home.png"
+      alt="Jade Journal home screen"
+      className="w-full rounded-md border border-ink/10"
+    />
+    <figcaption className="mt-2 text-center text-sm leading-6 text-charcoal">
+      Home screen
+    </figcaption>
+  </figure>
+
+<figure>
+  <img
+    src="/devlog/jade-journal/write.png"
+    alt="Writing a journal entry in Jade Journal"
+    className="w-full rounded-md border border-ink/10"
+  />
+  <figcaption className="mt-2 text-center text-sm leading-6 text-charcoal">
+    Writing an entry
+  </figcaption>
+</figure>
+
+<figure>
+  <img
+    src="/devlog/jade-journal/timeline.png"
+    alt="Journal entry timeline in Jade Journal"
+    className="w-full rounded-md border border-ink/10"
+  />
+  <figcaption className="mt-2 text-center text-sm leading-6 text-charcoal">
+    Timeline view
+  </figcaption>
+</figure>
+
+  <figure>
+    <img
+      src="/devlog/jade-journal/insights.png"
+      alt="Journal insights screen in Jade Journal"
+      className="w-full rounded-md border border-ink/10"
+    />
+    <figcaption className="mt-2 text-center text-sm leading-6 text-charcoal">
+      Insights view
+    </figcaption>
+  </figure>
+</div>
+
+This app was built with Claude. My main role was coming up with the idea, deciding on the features I wanted, and deploying it on Railway. It was my first time deploying with Railway. Unlike Vercel, where you can just connect a GitHub repository and hit deploy, Railway required more setup, including configuring environment variables, connecting to PostgreSQL, and integrating the OpenAI API.
+
+It felt so rewarding to finally see the app live. Even though it's a web app, it looks great on mobile and feels almost like a native app. I also added a custom app icon and a web manifest, so I can install it on my desktop and phone home screen for quick access, making it feel even more like a real application.
+After testing it, I found a few bugs. For example, the journal entry dates didn't always match the day I wrote them, and the timeline layout wasn't consistent with the other pages. I also improved the user experience by making the app automatically return to the homepage after deleting a journal entry. Before, it stayed on the deleted page, which made it confusing to tell whether the entry had actually been deleted.
+
+Now I can write my journal anywhere and anytime. I'm really happy and excited about it. Let's see how well it holds up over time. I hope that by the end of the year, it gives me meaningful insights into my journey, my growth, and my reflections.
