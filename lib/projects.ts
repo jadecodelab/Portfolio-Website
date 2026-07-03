@@ -5,6 +5,14 @@ export type OrderedProject = {
 
 export const orderedProjects = [
   {
+    slug: "personalized-birthday-card",
+    title: "Personalized Birthday Card",
+  },
+  {
+    slug: "jade-journal",
+    title: "Jade Journal",
+  },
+  {
     slug: "pgai-voice-bot-tester",
     title: "PGAI Voice Bot Tester",
   },

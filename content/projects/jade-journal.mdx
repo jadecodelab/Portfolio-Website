@@ -1,0 +1,75 @@
+---
+title: "Jade Journal"
+date: "2026-07-03"
+summary: "A full-stack private journaling app with optional AI reflection tools, search, mood tracking, dashboard insights, and an installable PWA experience."
+tags:
+  - Full-stack
+  - AI app
+  - Journaling
+  - PWA
+stack:
+  - React
+  - TypeScript
+  - Express
+  - PostgreSQL
+  - Prisma
+  - OpenAI API
+  - Ollama
+  - Railway
+links:
+  - label: "GitHub"
+    href: "https://github.com/jadecodelab/jade-journal"
+  - label: "Live app"
+    href: "https://jade-journal-production.up.railway.app/"
+featured: true
+---
+
+## Problem
+
+I wanted a journal app that I could use long term to document my journey and reflect over time. I did not want AI to write for me or turn journaling into a chatbot experience. The goal was to keep writing personal while using AI quietly in the background when I choose to ask for help.
+
+I also wanted the app to feel fast, private, and polished enough that opening it every day feels natural. A journal is only useful if it is easy to return to, so the experience needed to be calm, focused, and practical.
+
+## Approach
+
+I built Jade Journal as a full-stack personal journaling app with a distraction-free editor, autosave, search, calendar timeline, mood and confidence tracking, writing streaks, and dashboard statistics.
+
+The AI features are optional and user-triggered. Instead of generating entries, the app helps improve grammar, organize messy thoughts, extract insights, and create monthly or yearly reflections from existing entries. The product direction was intentionally human-first: AI supports reflection, but the journal entry still belongs to the writer.
+
+## Key features
+
+The app includes a clean journal editor with autosave, a searchable entry history, a calendar timeline, mood and confidence tracking, writing streaks, and dashboard analytics.
+
+The AI assistant includes four focused tools: Improve Writing, Organize, Extract Insights, and Reflect. Improve Writing fixes grammar and clarity while preserving my voice. Organize turns messy thoughts into sections like what happened, how I felt, what I learned, and next steps. Extract Insights identifies recurring wins, challenges, lessons, goals, and tags. Reflect looks across monthly or yearly entries to surface patterns over time.
+
+Jade Journal also includes a session password lock, support for either OpenAI or a local Ollama model, deterministic fallbacks when AI is unavailable, and PWA metadata so it can be installed on desktop or mobile like a real app.
+
+## Tech decisions
+
+I built the frontend with React, TypeScript, Vite, and React Router, with Tailwind CSS and shadcn/ui for the interface. The backend uses Node.js and Express, with Prisma connected to PostgreSQL.
+
+One of the most important architecture decisions was creating a single AI layer that can work with either OpenAI or Ollama through an OpenAI-compatible interface. Switching providers only requires changing configuration, and the app can still function without AI by falling back to deterministic logic.
+
+For analytics, I used server-side aggregation instead of third-party tracking. The dashboard summarizes writing streaks, mood distribution, confidence trends, word count, and frequently used tags from the journal data itself.
+
+## Challenges
+
+A date bug showed up when entries were saved with `toISOString()`, which stores dates in UTC. That meant entries could appear on the wrong calendar day for users in different time zones. I fixed it by saving and displaying entries based on the user's local date.
+
+Another issue appeared after deleting an entry. The client stayed on a page that no longer existed because it did not properly handle an HTTP `204 No Content` response. I fixed the response handling and redirected users back to the homepage after a successful delete.
+
+I also caught a database configuration risk during the move from SQLite to PostgreSQL. A stale local `.env` file still pointed at SQLite, which could have caused silent data confusion. I corrected the configuration, ran Prisma migrations, and verified that data persisted correctly with Neon PostgreSQL.
+
+## What I'd improve
+
+I would continue improving the privacy model, especially if this app ever became public for other users. I would also add stronger export options, richer filtering, and more control over how monthly and yearly reflections are generated.
+
+Long term, I would like the AI reflection tools to become more personal without becoming intrusive. The best version of this app would help notice patterns over time while still keeping the writing experience quiet and user-controlled.
+
+## What I learned
+
+This project helped me practice full-stack application architecture, AI integration, database persistence, deployment, and product design for a tool I actually want to use.
+
+The biggest lesson was learning how to design AI around a real user problem. AI was most useful when it had clear boundaries: improve this writing, organize these thoughts, extract patterns, or reflect on this time period. That made the app feel more trustworthy because it assists only when asked.
+
+I also learned more about working with AI during development. I used AI tools to brainstorm ideas, explore approaches, plan architecture, implement features, and debug issues, but the important decisions still came from reviewing, testing, and deciding what experience the app should become.
