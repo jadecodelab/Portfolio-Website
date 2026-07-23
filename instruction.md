@@ -73,12 +73,12 @@ public/devlog/post-slug/
 
 Example:
 
-```text
-public/devlog/jade-journal/home.png
-public/devlog/jade-journal/write.png
-public/devlog/jade-journal/timeline.png
-public/devlog/jade-journal/insights.png
-```
+<figure>
+  <img
+    src="/devlog/admin-dashboard/Screenshot.png"
+    alt="Admin Dashboard screenshot"
+  />
+</figure>
 
 Use this layout for four screenshots:
 
