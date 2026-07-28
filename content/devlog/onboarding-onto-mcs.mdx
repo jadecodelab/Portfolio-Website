@@ -1,0 +1,29 @@
+---
+title: "Onboarding onto MCS"
+date: "2026-07-27"
+summary: "Getting a CRM platform with an AI chatbot layer running locally for the first time."
+tags:
+  - ".NET 6"
+  - "ASP.NET"
+  - "AngularJS"
+  - "Kendo UI"
+  - "SQL Server"
+  - "MongoDB"
+  - "AI Chatbot"
+---
+
+Getting set up on my brother's project, a CRM platform with an AI chatbot layer built in. It uses MCP tooling, a RAG-based knowledge base, and configurable chatbot skills. Right now it is using church and parish records as a test dataset, but the platform itself is meant to work for other kinds of businesses too.
+
+My first task is getting the project running on my own laptop.
+
+I installed SQL Server and MongoDB locally and spent most of the day working through connection issues. SQL Server defaulted to Windows-only authentication, so logging in with a username and password kept failing until I switched it to mixed mode and restarted the service. Then the `sa` password itself needed resetting, since it is a separate password on my machine than on my brother's.
+
+The database came from a backup file my brother sent over. Restoring it hit two snags: SQL Server could not read the file while it sat in a OneDrive-synced folder, and the backup's original database name did not match the empty one I had created, so I had to explicitly tell it to overwrite.
+
+I also looked into how the project handles database migrations. There are about 90 SQL scripts that get run through an admin screen inside the app itself, not automatically. Good to understand going in, since the first admin login is not created by any of those scripts. It comes from the base backup.
+
+By the end of the day the app was running locally and I was logged in, looking at the dashboard and the chatbot config screens for the first time.
+
+Next up is a small frontend task from my brother, which will be my first actual code change.
+
+**Stack:** .NET 6, ASP.NET, AngularJS, Kendo UI, SQL Server, MongoDB
