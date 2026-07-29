@@ -1,0 +1,59 @@
+---
+title: "Calendar UI/UX Improvements"
+date: "2026-07-29"
+summary: "Improved the MCS appointment scheduler with better spacing, clearer active-day styling, event times, and side-by-side overlap handling."
+tags:
+  - "AngularJS"
+  - "Kendo UI"
+  - "Scheduler"
+  - "CSS"
+  - "UX"
+---
+
+Second round of work on my brother's CRM, this time actually touching code instead of just setup. My task was improving the UX of the appointment scheduler, a Kendo UI calendar that felt cramped and had a few things quietly broken underneath.
+
+<div className="space-y-8">
+  <figure>
+    <img
+      src="/mcs-calendar/before.png"
+      alt="MCS calendar before the scheduler UI improvements"
+      className="w-full rounded-md border border-ink/10"
+    />
+    <figcaption className="mt-2 text-center text-sm leading-6 text-charcoal">
+      Before: the calendar felt cramped and event cards were harder to read
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img
+      src="/mcs-calendar/after.png"
+      alt="MCS calendar after the scheduler UI improvements"
+      className="w-full rounded-md border border-ink/10"
+    />
+    <figcaption className="mt-2 text-center text-sm leading-6 text-charcoal">
+      After: taller rows, event times, correct widths, and overlapping events
+    </figcaption>
+  </figure>
+</div>
+
+## Day 1 - Making it breathe
+
+Started small. The time grid felt tight, so I increased the row height across week and day view. Then I noticed the hour labels, like "9 AM" and "10 AM," were stuck to the top of each row instead of sitting centered next to the line they marked. That was a leftover from before the rows got taller, so I centered them both vertically and horizontally.
+
+The fix itself turned into a small lesson: my first attempt at the CSS did not work at all, and it took a bit of digging in DevTools to figure out why. The original selector assumed an ID and a class lived on the same element, but they were actually on two different ones a level apart in the DOM. Adding a single space turned it into a descendant selector instead of a compound one, and that fixed it.
+
+## Day 2 - Polish, plus a real bug
+
+Cleaned up font sizing and weight across the header and time labels next. Then I found something less cosmetic: the "today" column was shaded the same gray Kendo uses for non-working hours, which made today look closed for business rather than highlighted. I scoped the active-day color to just the date header instead, so today stands out the way it should without recoloring the whole column.
+
+I also added appointment times to the event cards. Before, they only showed a title and no start or end time, which is not very useful for a calendar.
+
+The bigger find was a width bug. Appointment cards were rendering narrower than their day column, and it turned out to be a timing issue: Kendo calculates each event's width once, but my taller rows from the day before pushed the grid tall enough to trigger a scrollbar, which narrows the columns after Kendo already did its math. Every card was sized for a column that no longer existed. I fixed it by measuring each day's actual column on screen and aligning events to that directly, rather than trusting Kendo's initial and now stale numbers.
+
+While in there, I also noticed overlapping appointments were rendering fully on top of each other and becoming unreadable. This Kendo version only stacks concurrent events vertically, never splits them side by side. I added logic similar to what Google Calendar does: each event gets assigned to the earliest available track, and the column width splits evenly across however many tracks are needed for that time slot.
+
+## Where it's at
+
+The calendar is noticeably more readable now: taller rows, centered labels, a "today" that actually looks active, event cards that show time and fill their columns properly, and overlapping appointments that are finally legible side by side instead of stacked invisibly.
+
+**Stack:** AngularJS, Kendo UI Scheduler, CSS
