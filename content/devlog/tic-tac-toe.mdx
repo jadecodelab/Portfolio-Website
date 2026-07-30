@@ -1,0 +1,33 @@
+---
+title: "Tic Tac Toe"
+date: "2026-07-30"
+summary: "Built a playable Tic Tac Toe game while practicing module patterns, factory functions, and cleaner DOM boundaries."
+tags:
+  - "JavaScript"
+  - "The Odin Project"
+  - "HTML"
+  - "CSS"
+
+links:
+  - label: "GitHub"
+    href: "https://github.com/jadecodelab/tic-tac-toe"
+  - label: "Live demo"
+    href: "https://jadecodelab.github.io/tic-tac-toe/"
+---
+
+<iframe
+  title="Tic Tac Toe"
+  src="https://jadecodelab.github.io/tic-tac-toe/"
+  width="100%"
+  height="700"
+  style={{ border: "1px solid #ddd", borderRadius: "8px" }}
+/>
+
+I finished the Tic Tac Toe project from the JavaScript course on [The Odin Project](https://www.theodinproject.com/). The lesson was structure: build a playable game while keeping global code to a minimum.
+
+This project challenged me to think beyond writing functions and instead design a small application by separating responsibilities into different modules. Rather than putting all the logic in one file, I organized the game using the module pattern (IIFE) and factory functions to keep the code maintainable and easy to understand.
+I started with the logic before touching the DOM. `GameBoard` became a module, `Player` became a factory, and `GameController` handled turns, win checks, ties, and game-over state. Getting that working in the console first made the UI part much calmer.
+
+After that I added a `DisplayController` to keep the DOM separate from the rules.
+
+By the end, I had a fully playable neon-styled game with player names, turn feedback, win detection, tie handling, reset controls, and a highlighted winning line.
