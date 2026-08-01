@@ -5,6 +5,10 @@ export type OrderedDevlogPost = {
 
 export const orderedDevlogPosts = [
   {
+    slug: "jade-journal-render-neon",
+    title: "Moving Jade Journal to Render and Neon",
+  },
+  {
     slug: "restaurant-page",
     title: "Jade's Restaurant",
   },

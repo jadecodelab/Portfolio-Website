@@ -1,0 +1,27 @@
+---
+title: "Moving Jade Journal to Render and Neon"
+date: "2026-08-01"
+summary: "Moved Jade Journal off Railway after the trial credits ran out, with a careful backup and migration to Neon."
+tags:
+  - "Jade Journal"
+  - "Render"
+  - "Neon"
+  - "PostgreSQL"
+  - "Prisma"
+---
+
+Railway's trial credits ran out, so Jade Journal went down. Since it is a personal app, I wanted the cheapest path back online without losing the entries I had already written.
+
+At first I thought the database was already on Neon because my local `.env` pointed there. My plan was just to move the app hosting to Render and call it done. Then I checked production and found it was actually using a separate Railway Postgres database.
+
+That was the important pause. If I had migrated based on the local setup, I could have replaced the real production data with old or empty data from Neon. There were about 30 actual journal entries on the line, so I backed up before touching anything.
+
+Railway's free tier would not let me run `pg_dump` directly, and I did not have Docker set up locally, so I used a Prisma script to export the production data to JSON through Railway's console. I checked the counts for entries, tags, and reflections before moving forward.
+
+Once the backup was safe, I migrated the real data into Neon, pointed the live app at Neon, moved hosting from Railway to Render's free tier, and only deleted the Railway project after the app worked end to end.
+
+Jade Journal is back online now, still holding all my entries, but running on a fully free Render + Neon setup.
+
+Biggest lesson: a local `.env` matching production is an assumption, not a guarantee. For anything with real data, even my own, the workflow should be backup, verify, migrate, and verify again.
+
+**Stack:** Render, Neon, PostgreSQL, Prisma, Railway
