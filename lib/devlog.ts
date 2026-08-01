@@ -5,6 +5,10 @@ export type OrderedDevlogPost = {
 
 export const orderedDevlogPosts = [
   {
+    slug: "restaurant-page",
+    title: "Jade's Restaurant",
+  },
+  {
     slug: "tic-tac-toe",
     title: "Tic Tac Toe",
   },
