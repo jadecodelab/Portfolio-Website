@@ -14,13 +14,13 @@ stack:
   - PostgreSQL
   - Prisma
   - OpenAI API
-  - Ollama
-  - Railway
+  - Render
+  - Neon
 links:
   - label: "GitHub"
     href: "https://github.com/jadecodelab/jade-journal"
   - label: "Live app"
-    href: "https://jade-journal-production.up.railway.app/"
+    href: "https://jade-journal.onrender.com"
 featured: true
 ---
 
@@ -57,6 +57,8 @@ I built the frontend with React, TypeScript, Vite, and React Router, with Tailwi
 One of the most important architecture decisions was creating a single AI layer that can work with either OpenAI or Ollama through an OpenAI-compatible interface. Switching providers only requires changing configuration, and the app can still function without AI by falling back to deterministic logic.
 
 For analytics, I used server-side aggregation instead of third-party tracking. The dashboard summarizes writing streaks, mood distribution, confidence trends, word count, and frequently used tags from the journal data itself.
+
+The app is deployed on Render, with the database hosted on Neon PostgreSQL — a fully free stack, since this is a single-user personal tool and doesn't need dedicated compute or paid database tiers.
 
 ## Challenges
 
