@@ -48,3 +48,7 @@ While chasing that, I ran into a few more bugs. An Angular crash (infinite diges
 ## Fix consistency
 
 edit/delete buttons using different icons and colors depending on which part of the page you were on, a six-color quick-action bar where none of the colors meant anything, and a status tag that looked identical to an action button next to it. Lined all of it up with the project's own documented button conventions. Also made the timeline's edit/delete icons only appear on hover instead of always showing. They got visually loud once real data filled the cards, and most of the time you don't need them front and center.
+
+## Found workflow issue
+
+I kept hitting the same git conflict every time I pulled, merged, or switched branches. appsettings.json (which holds local database credentials) is tracked in git instead of gitignored, so my local connection string kept colliding with the shared file. Flagged it to my brother and proposed moving to a gitignored config with an example template instead and he agreed.
