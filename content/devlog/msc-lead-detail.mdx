@@ -1,0 +1,50 @@
+---
+title: "Lead Detail Page UI/UX Improvements"
+date: "2026-08-10"
+summary: "Fixed visual hierarchy on a CRM's Lead Detail page and found some bugs along the way"
+tags:
+  - "AngularJS"
+  - "Kendo UI"
+  - "Bootstrap 4"
+  - "UX/UI"
+---
+
+The task: improve UX/UI of the Lead Detail drawer.
+
+<div className="space-y-8">
+  <figure>
+    <img
+      src="/devlog/lead-detail/before.png"
+      alt="Lead detail before the improvements"
+      className="w-full rounded-md border border-ink/10"
+    />
+    <figcaption className="mt-2 text-center text-sm leading-6 text-charcoal">
+      Before: six sidebar cards all looked identicaland inconsistent buttons/colors created visual clutter
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img
+      src="/devlog/lead-detail/after.png"
+      alt="Lead detail after the improvements"
+      className="w-full rounded-md border border-ink/10"
+    />
+    <figcaption className="mt-2 text-center text-sm leading-6 text-charcoal">
+      After: the next-action card stands out clearly, empty states guide users with a CTA, buttons follow one consistent style, and the color palette is calmer and more purposeful
+    </figcaption>
+  </figure>
+</div>
+
+## Fix visual hierarchy
+
+Gave the "Giao dịch tiếp theo" (next action) card an accent border and header so it visually leads the page, and replaced its empty state which used to just show bare dashes for every field with a plain message and a "Tạo hoạt động" button.
+
+## Found bugs
+
+I clicked the new button, created an activity, and the card never updated. Turned out the button was calling a shared function, but that function was missing a fallback value that every other button using it already had a one-line inconsistency that meant activities created from my new button silently saved without linking to an opportunity, so the sidebar never had anything to sync back to. Fixed by matching the pattern already used everywhere else in the file.
+
+While chasing that, I ran into a few more bugs. An Angular crash (infinite digest loop) from an ng-if bound to a function that returned a new object every time it ran, instead of reusing the same reference. A save button on the Lead edit form that was dismissing the modal instead of closing it, meaning a successful save looked identical to hitting cancel, so nothing ever visibly updated until you manually refreshed.
+
+## Fix consistency
+
+edit/delete buttons using different icons and colors depending on which part of the page you were on, a six-color quick-action bar where none of the colors meant anything, and a status tag that looked identical to an action button next to it. Lined all of it up with the project's own documented button conventions. Also made the timeline's edit/delete icons only appear on hover instead of always showing. They got visually loud once real data filled the cards, and most of the time you don't need them front and center.

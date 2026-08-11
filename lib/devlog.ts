@@ -5,6 +5,10 @@ export type OrderedDevlogPost = {
 
 export const orderedDevlogPosts = [
   {
+    slug: "mcs-lead-detail",
+    title: "Lead Detail Page UI/UX Improvements",
+  },
+  {
     slug: "todo-list",
     title: "Todo List",
   },
